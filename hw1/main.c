@@ -52,6 +52,10 @@ int main(int argc, char **argv) {
             return 1;
         }
 
+        if (strcmp(argv[1], "rm") == 0) {
+            return beargit_rm(argv[2]);
+          }
+
         if (strcmp(argv[1], "add") == 0 || strcmp(argv[1], "rm") == 0) {
 
           if (argc < 3 || !check_filename(argv[2])) {
